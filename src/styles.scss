@@ -1,0 +1,18 @@
+@import "tailwindcss";
+body{
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: brown;
+}
+
+.font {
+    font-family: sans-serif;
+}
+
+.mat-toolbar,
+.mat-toolbar span,
+.mat-button,
+.mat-icon-button {
+  font-family: 'Baloo Bhaijaan 2', sans-serif !important;
+}
