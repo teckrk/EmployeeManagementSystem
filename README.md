@@ -1,59 +1,122 @@
-# WebApp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management Web App - Features</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    li {
+      margin: 0.3rem 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Management Web App</h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+    <h2>1. Project Setup</h2>
+    <ul>
+      <li>Create .NET 9 backend project</li>
+      <li>Setup Angular frontend project</li>
+    </ul>
 
-## Development server
+    <h2>2. Department Management</h2>
+    <ul>
+      <li>Add departments</li>
+      <li>Edit departments</li>
+      <li>Delete departments</li>
+    </ul>
 
-To start a local development server, run:
+    <h2>3. Employee Management</h2>
+    <ul>
+      <li>View employee list (name, email, phone, job title, etc.)</li>
+      <li>Add new employee</li>
+      <li>Edit employee details</li>
+      <li>Delete employees</li>
+      <li>Search employees</li>
+    </ul>
 
-```bash
-ng serve
-```
+    <h2>4. User Authentication & Roles</h2>
+    <ul>
+      <li>Login & Logout (Admin & Employee)</li>
+      <li>Role-based access control (Admin vs Employee)</li>
+      <li>Change password</li>
+    </ul>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    <h2>5. Profile Management</h2>
+    <ul>
+      <li>Update profile details</li>
+      <li>Change profile picture</li>
+    </ul>
 
-## Code scaffolding
+    <h2>6. Search and Pagination</h2>
+    <ul>
+      <li>Search functionality</li>
+      <li>Pagination for lists</li>
+    </ul>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+    <h2>7. Leave Management</h2>
+    <ul>
+      <li>Apply for leave (date, reason)</li>
+      <li>Admin can approve/reject leave requests</li>
+    </ul>
 
-```bash
-ng generate component component-name
-```
+    <h2>8. Attendance Management</h2>
+    <ul>
+      <li>Mark attendance</li>
+      <li>View attendance history</li>
+      <li>Monthly attendance report</li>
+    </ul>
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    <h2>9. Payroll Management (Basic)</h2>
+    <ul>
+      <li>Set salary details for employees</li>
+      <li>View salary history</li>
+      <li>Generate simple salary slip</li>
+    </ul>
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    <h2>10. Reports & Dashboard</h2>
+    <ul>
+      <li>Employee count</li>
+      <li>Department count</li>
+      <li>Total salary expense (monthly)</li>
+      <li>Department-wise employee count</li>
+      <li>Employees on leave today</li>
+    </ul>
+  </div>
+</body>
+</html>
