@@ -1,59 +1,67 @@
-# WebApp
+# 💼Employee Management Web App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A full-stack web application built with **.NET 9 (Backend)** and **Angular (Frontend)** to manage employees, departments, attendance, payroll, and more. The application includes role-based access for Admin and Employee users.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🔧 Features Overview
 
-```bash
-ng serve
-```
+### 📁 Project Setup
+- .NET 9 backend project
+- Angular frontend project
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🏢 Department Management
+- Add, edit, and delete departments
 
-## Code scaffolding
+### 👨‍💼 Employee Management
+- View employee list with full details
+- Add new employees
+- Edit and delete existing employees
+- Search functionality
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🔐 User Authentication & Roles
+- Admin and Employee login/logout
+- Role-based access control (Admin vs Employee)
+- Change password
 
-```bash
-ng generate component component-name
-```
+### 👤 Profile Management
+- Employees can update their own profile
+- Upload/change profile picture
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🔍 Search & Pagination
+- Search employees
+- Paginated lists for better performance
 
-```bash
-ng generate --help
-```
+### 📝 Leave Management
+- Apply for leave with reason and dates
+- Admin can approve/reject leave requests
 
-## Building
+### 🕒 Attendance Management
+- Mark daily attendance
+- View personal attendance history
+- Generate monthly attendance reports
 
-To build the project run:
+### 💰 Payroll Management (Basic)
+- Set salary details per employee
+- View salary history
+- Generate basic salary slips
 
-```bash
-ng build
-```
+### 📊 Reports & Dashboard
+- Total employee count
+- Department-wise employee count
+- Total salary expense for the month
+- Current employees on leave
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🛠️ Tech Stack
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+| Layer          | Technology            |
+|----------------|------------------------|
+| Frontend       | Angular                |
+| Backend        | .NET 9 (ASP.NET Core)  |
+| Database       | SQL Server / MySQL     |
+| Authentication | JWT (JSON Web Tokens)  |
+| Hosting        | GitHub Pages           |
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ 
