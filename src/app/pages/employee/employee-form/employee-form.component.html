@@ -1,0 +1,95 @@
+<mat-card class="p-4 m-4 shadow-md max-w-xl mat-card! mx-auto">
+
+
+    <mat-card-title class="text-3xl! font-bold! mat-card">Employee Form</mat-card-title>
+
+    <form [formGroup]=" employeeForm" (ngSubmit)="onSubmit()" class="mat-card">
+        <mat-form-field appearance="fill" class="w-full mb-2">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-full mb-2">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+        </mat-form-field>
+
+        <div class="flex gap-2">
+            <mat-form-field appearance="fill" class="w-6/12 mb-2">
+                <mat-label>Phone</mat-label>
+                <input matInput formControlName="phone" required>
+            </mat-form-field>
+
+            <label class="block mb-2">Gender</label>
+            <mat-radio-group formControlName="gender" class="mb-2 w-6/12 flex flex-row gap-4">
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div class="flex gap-2">
+            <mat-form-field appearance="fill" class="w-6/12 mb-2">
+                <mat-label>JobTitle</mat-label>
+                <mat-select formControlName="jobTitle">
+                    <!-- <mat-option *ngFor="let dept of departments" [value]="dept">{{ dept }}</mat-option> -->
+                    <mat-option value="developer">Designer</mat-option>
+                    <mat-option value="designer">Developer</mat-option>
+                    <mat-option value="manager">Manager</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="w-6/12 mb-2">
+                <mat-label>Department</mat-label>
+                <mat-select formControlName="departmentId">
+                    @for (item of departments; track $index){
+                    <mat-option [value]="item.id">{{item.name}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <mat-form-field class="w-full mb-2">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="dateOfBirth">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+
+        <div class="flex gap-2 mb-2">
+            <mat-form-field class="w-6/12">
+                <mat-label>Joinnning Date</mat-label>
+                <input matInput [matDatepicker]="picker2" formControlName="joiningDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker2">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="w-6/12">
+                <mat-label>Last Working Date</mat-label>
+                <input matInput [matDatepicker]="picker3" formControlName="lastWorkingDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker3">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="flex justify-center">
+            <button mat-raised-button class="text-white!" type="submit" [ngClass]="{
+                'bg-gray-400!': employeeForm.invalid,
+                'bg-green-600!': employeeForm.valid
+            }" [disabled]="employeeForm.invalid">
+                Submit
+            </button>
+        </div>
+
+    </form>
+</mat-card>

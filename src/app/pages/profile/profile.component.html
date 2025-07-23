@@ -1,0 +1,33 @@
+<div class="h-screen flex items-center justify-center bg-blue-50">
+    <mat-card class="w-96 p-6 shadow-lg bg-white">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">Login</h2>
+
+        <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+            <div class="w-full mb-2">
+                <input class="bg-gray-400" type="file" (change)="fileUpload($event)">
+                <img class="w-[150px]" [src]="imageSrc" alt="Preview" />
+            </div>
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Phone</mat-label>
+                <input matInput formControlName="phone" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+
+            <button mat-raised-button color="white" class="w-full bg-green-500! text-white! font-bold! mat-card!"
+                type="submit">
+                Update
+            </button>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,22 @@
+<div class="h-screen flex items-center justify-center bg-blue-50">
+    <mat-card class="w-96 p-6 shadow-lg bg-white">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">Login</h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="w-full mb-4">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+
+            <button mat-raised-button color="white" class="w-full bg-green-500! text-white! font-bold!" type="submit"
+                [disabled]="loginForm.invalid">
+                Login
+            </button>
+        </form>
+    </mat-card>
+</div>
